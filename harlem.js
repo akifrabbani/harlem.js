@@ -2,11 +2,10 @@
  // Harlem Shake jQuery
  // by akif.rabbani.my :D
  
- // messy. made in 20 minutes.
- document.write(' <audio controls="controls" autoplay="autoplay" style="display:none"><source src="hs.ogg" type="audio/ogg" /></audio>');
   var all = $("a");
  var first = $("a:eq(0)");
-
+document.write('<audio controls="controls" id="harlem-play" style="display:none"><source src="https://raw.github.com/akifrabbani/harlem.js/master/hs.ogg" type="audio/ogg" /></audio>');
+   
    $(first).jrumble({
         x: 2,
         y: 2,
@@ -19,16 +18,19 @@
 		speed:50,
         rotation: 1
     });
-	
-
+function startharlem() {
+var audioplayer = document.getElementById("harlem-play");
 
  $(first).addClass('first');
 $(first).trigger('startRumble');
+ audioplayer.play();
  var startdrunk = setInterval(function() {
 $(all).trigger('startRumble');
  var stopdrunk = setInterval(function() {
  $(all).trigger('stopRumble');
+      audioplayer.pause();
 clearInterval( stopdrunk );
     }, 14500);
 clearInterval( startdrunk );
-    }, 15500);
+    }, 17000);
+	 }
