@@ -3,7 +3,7 @@
  // by akif.rabbani.my :D
  
   var all = $("a");
- var first = $("a:eq(0)");
+ var first = $("div:eq(0)");
 document.write('<audio controls="controls" id="harlem-play" style="display:none"><source src="https://raw.github.com/akifrabbani/harlem.js/master/hs.ogg?raw=true" type="audio/ogg" /></audio>');
    
    $(first).jrumble({
@@ -28,6 +28,7 @@ $(first).trigger('startRumble');
 $(all).trigger('startRumble');
  var stopdrunk = setInterval(function() {
  $(all).trigger('stopRumble');
+ $(first).trigger('stopRumble');
       audioplayer.pause();
 clearInterval( stopdrunk );
     }, 14500);
