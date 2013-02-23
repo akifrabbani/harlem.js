@@ -4,7 +4,7 @@
  
   var all = $("a");
  var first = $("a:eq(0)");
-document.write('<audio controls="controls" id="harlem-play" style="display:none"><source src="https://raw.github.com/akifrabbani/harlem.js/master/hs.ogg" type="audio/ogg" /></audio>');
+document.write('<audio controls="controls" id="harlem-play" style="display:none"><source src="https://raw.github.com/akifrabbani/harlem.js/master/hs.ogg?raw=true" type="audio/ogg" /></audio>');
    
    $(first).jrumble({
         x: 2,
