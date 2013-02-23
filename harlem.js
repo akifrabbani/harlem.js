@@ -33,5 +33,5 @@ $(all).trigger('startRumble');
 clearInterval( stopdrunk );
     }, 14500);
 clearInterval( startdrunk );
-    }, 15500);
+    }, 16000);
 	 }
